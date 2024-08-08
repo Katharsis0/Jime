@@ -1,0 +1,93 @@
+﻿@model IEnumerable<Classmate.Models.Nota>
+
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<h1>Lista de Notas</h1>
+
+<p>
+    <a asp-action="Create">Crear Nota</a>
+</p>
+@{
+    var temas = ViewBag.tema;
+}
+
+<<form asp-action="Index">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="form-group">
+        <label class="control-label"> Búsqueda por tema: </label>
+        <select name="tema">
+            <option value="">-- Seleccionar tema --</option>
+            @foreach (var aux in temas)
+            {
+                <option value="@aux.Tema">  @aux.Tema  </option>
+            }
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label class="control-label">Buscar por nombre:</label>
+        <input type="text" name="search" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Buscar" class="btn btn-primary" />
+    </div>
+
+    
+</form>
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contenido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>Urgente</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contenido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tema)
+                </td>
+                <td>
+                    @item.Fecha.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    <form asp-action="MarcarComoPendiente" asp-route-id="@item.Id" method="post">
+                        <input type="checkbox" @(item.Pendiente ? "checked" : "") onchange="this.form.submit();" />
+                    </form>
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                    @* @Html.ActionLink("Details", "Details", new { id = item.Id })  *@
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

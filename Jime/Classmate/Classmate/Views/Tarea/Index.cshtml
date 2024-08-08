@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Classmate.Models.Tarea>
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Lista de Tareas</h1>
+<p>
+    <a asp-action="Create">Crear Tarea </a>
+</p>
+
+@{
+    var temas = ViewBag.tema;
+}
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contenido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tema)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha)
+            </th>
+            <th>Urgente</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contenido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tema)
+                </td>
+                <td>
+                    @item.Fecha.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    <form asp-action="MarcarComoPendiente" asp-route-id="@item.Id" method="post">
+                        <input type="checkbox" @(item.Pendiente ? "checked" : "") onchange="this.form.submit();" />
+                    </form>
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

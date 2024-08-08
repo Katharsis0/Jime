@@ -1,0 +1,57 @@
+﻿@model DetallesDiaViewModel
+
+<h1>Detalles del día @Model.Fecha.ToString("d MMMM yyyy")</h1>
+
+<h2>Tareas</h2>
+<a asp-controller="Tarea" asp-action="Create" asp-route-fecha="@Model.Fecha.ToString("yyyy-MM-dd")" class="btn btn-primary mb-3">Crear nueva tarea</a>
+
+@if (Model.Tareas.Any())
+{
+    <ul class="list-group">
+        @foreach (var tarea in Model.Tareas)
+        {
+            <li class="list-group-item">
+                <h5>@tarea.Nombre</h5>
+                <p>Contenido: @tarea.Contenido</p>
+                <p>Tema: @tarea.Tema</p>
+                <p>Fecha: @tarea.Fecha.ToString("g")</p>
+                <div class="btn-group" role="group">
+                    <a asp-controller="Tarea" asp-action="Edit" asp-route-id="@tarea.Id" asp-route-fechaOriginal="@Model.Fecha.ToString("yyyy-MM-dd")" class="btn btn-warning">Editar</a>
+                    <a asp-controller="Tarea" asp-action="Delete" asp-route-id="@tarea.Id" asp-route-fechaOriginal="@Model.Fecha.ToString("yyyy-MM-dd")" class="btn btn-danger">Eliminar</a>
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No hay tareas para este día.</p>
+}
+
+<h2 class="mt-4">Notas</h2>
+<a asp-controller="Nota" asp-action="Create" asp-route-fecha="@Model.Fecha.ToString("yyyy-MM-dd")" class="btn btn-success mb-3">Crear nueva nota</a>
+
+@if (Model.Notas.Any())
+{
+    <ul class="list-group">
+        @foreach (var nota in Model.Notas)
+        {
+            <li class="list-group-item">
+                <h5>@nota.Nombre</h5>
+                <p>Contenido: @nota.Contenido</p>
+                <p>Tema: @nota.Tema</p>
+                <p>Fecha: @nota.Fecha.ToString("g")</p>
+                <div class="btn-group" role="group">
+                    <a asp-controller="Nota" asp-action="Edit" asp-route-id="@nota.Id" asp-route-fechaOriginal="@Model.Fecha.ToString("yyyy-MM-dd")" class="btn btn-warning">Editar</a>
+                    <a asp-controller="Nota" asp-action="Delete" asp-route-id="@nota.Id" asp-route-fechaOriginal="@Model.Fecha.ToString("yyyy-MM-dd")" class="btn btn-danger">Eliminar</a>
+                </div>
+            </li>
+        }
+    </ul>
+}
+else
+{
+    <p>No hay notas para este día.</p>
+}
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Volver al calendario</a>

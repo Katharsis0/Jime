@@ -1,0 +1,15 @@
+﻿@model Classmate.Models.Usuario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Eliminar cuenta</h1>
+
+<h3>¿Estás seguro que deseas eliminar tu cuenta de Classmate?</h3>
+
+    
+    <form asp-action="Delete">
+    <input type="submit" value="Eliminar" class="btn btn-danger" /> |
+        <a asp-action="Index">  Volver</a>
+    </form>

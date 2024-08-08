@@ -1,0 +1,151 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Classmate
+build_property.RootNamespace = Classmate
+build_property.ProjectDir = C:\Users\regr9\Dropbox (Anterior)\PC\Downloads\Classmate\Classmate\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\regr9\Dropbox (Anterior)\PC\Downloads\Classmate\Classmate
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Calendario/DetallesDia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJpb1xEZXRhbGxlc0RpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Calendario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FsZW5kYXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/HabitoClass/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRvQ2xhc3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/HabitoClass/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRvQ2xhc3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/HabitoClass/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRvQ2xhc3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/HabitoClass/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFiaXRvQ2xhc3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Nota/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Nota/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Nota/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Nota/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm90YVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Pomodoro/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9tb2Rvcm9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Tarea/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Tarea/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Tarea/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Tarea/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGFyZWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/TemaClass/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYUNsYXNzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/TemaClass/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYUNsYXNzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/TemaClass/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYUNsYXNzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/TemaClass/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVtYUNsYXNzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Usuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Usuario/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Usuario/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Usuario/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/regr9/Dropbox (Anterior)/PC/Downloads/Classmate/Classmate/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-l51mfj38v2

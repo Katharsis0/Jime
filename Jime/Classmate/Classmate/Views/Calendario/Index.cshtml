@@ -1,0 +1,51 @@
+﻿@model CalendarioViewModel
+
+<h1>Calendario</h1>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <a asp-action="Index" asp-route-fecha="@Model.FechaActual.AddMonths(-1).ToString("yyyy-MM-dd")" class="btn btn-outline-primary">&lt; Mes anterior</a>
+    <h2>@Model.FechaActual.ToString("MMMM yyyy")</h2>
+    <a asp-action="Index" asp-route-fecha="@Model.FechaActual.AddMonths(1).ToString("yyyy-MM-dd")" class="btn btn-outline-primary">Mes siguiente &gt;</a>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Lun</th>
+            <th>Mar</th>
+            <th>Mié</th>
+            <th>Jue</th>
+            <th>Vie</th>
+            <th>Sáb</th>
+            <th>Dom</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var primerDia = new DateTime(Model.FechaActual.Year, Model.FechaActual.Month, 1);
+            var ultimoDia = primerDia.AddMonths(1).AddDays(-1);
+            var diaActual = primerDia.AddDays(-(int)primerDia.DayOfWeek + 1);
+
+            while (diaActual <= ultimoDia)
+            {
+                <tr>
+                    @for (int i = 0; i < 7; i++)
+                    {
+                        <td class="@(diaActual.Month == Model.FechaActual.Month ? "" : "text-muted")">
+                            <a asp-action="DetallesDia" asp-route-fecha="@diaActual.ToString("yyyy-MM-dd")" class="d-block">
+                                @diaActual.Day
+                            </a>
+                            @foreach (var evento in Model.Eventos.Where(e => e.Fecha.Date == diaActual.Date))
+                            {
+                                <div class="@(evento.Tipo == "Tarea" ? "bg-primary" : "bg-success") text-white p-1 mt-1">
+                                    @evento.Titulo
+                                </div>
+                            }
+                        </td>
+                        diaActual = diaActual.AddDays(1);
+                    }
+                </tr>
+            }
+        }
+    </tbody>
+</table>

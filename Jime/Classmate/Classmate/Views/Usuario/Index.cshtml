@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Classmate.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Gestionar mi cuenta Classmate</h1>
+
+
+<table class="table">
+   
+    <p>
+        
+        <a asp-action="Login">Cerrar Sesión</a>
+    </p>
+    
+
+    <thead>
+        <tr>
+            <th>
+                <label> Nombre  </label>
+            </th>
+            <th>
+                <label> Primer Apellido </label>
+            </th>
+            <th>
+                <label> Segundo Apellido  </label>
+            </th>
+            <th>
+                <label> Correo  </label>
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+
+
+
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+          
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoUno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ApellidoDos)
+            </td>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.Correo)
+            </td>
+            <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+                @* @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) | *@
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

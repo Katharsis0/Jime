@@ -1,0 +1,55 @@
+﻿@model Classmate.Models.Nota
+@{
+    ViewData["Title"] = "Edit";
+}
+<h1>Editar Nota</h1>
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        @{
+            var temas = ViewBag.temas;
+        }
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" name="fechaOriginal" value="@ViewBag.FechaOriginal" />
+
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Contenido" class="control-label"></label>
+                <textarea asp-for="Contenido" class="form-control"></textarea>
+                <span asp-validation-for="Contenido" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Tema" class="control-label"></label>
+                <select asp-for="Tema" class="form-control">
+                    @foreach (var aux in temas)
+                    {
+                        <option>@aux.Tema</option>
+                    }
+                </select>
+                <span asp-validation-for="Tema" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fecha" class="control-label"></label>
+                <input asp-for="Fecha" class="form-control" type="date" />
+                <span asp-validation-for="Fecha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-controller="Calendario" asp-action="DetallesDia" asp-route-fecha="@ViewBag.FechaOriginal" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

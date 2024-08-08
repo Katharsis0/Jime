@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Pomodoro</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <style>
+        #timer {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        #start-reset, #stop {
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="timer">25:00</div>
+        <button id="start-reset">Comenzar</button>
+        <button id="stop">Detener</button>
+    </div>
+
+    <script>
+        let timer;
+        let isRunning = false;
+        let isWorkInterval = true;
+        let workMinutes = 25;
+        let breakMinutes = 5;
+        let currentMinutes = workMinutes;
+        let seconds = 0;
+
+        const timerDisplay = document.getElementById('timer');
+        const startResetButton = document.getElementById('start-reset');
+        const stopButton = document.getElementById('stop');
+
+        function updateDisplay() {
+            const minutesDisplay = currentMinutes < 10 ? `0${currentMinutes}` : currentMinutes;
+            const secondsDisplay = seconds < 10 ? `0${seconds}` : seconds;
+            timerDisplay.textContent = `${minutesDisplay}:${secondsDisplay}`;
+        }
+
+        function switchInterval() {
+            if (isWorkInterval) {
+                currentMinutes = breakMinutes;
+                alert("Es tiempo de tomar un descanso.");
+            } else {
+                currentMinutes = workMinutes;
+                alert("Es tiempo de seguir trabajando.");
+            }
+            isWorkInterval = !isWorkInterval;
+            seconds = 0;
+            updateDisplay();
+        }
+
+        function startTimer() {
+            if (!isRunning) {
+                isRunning = true;
+                startResetButton.textContent = "Reiniciar";
+                timer = setInterval(() => {
+                    if (seconds === 0) {
+                        if (currentMinutes === 0) {
+                            switchInterval();
+                        } else {
+                            currentMinutes--;
+                            seconds = 59;
+                        }
+                    } else {
+                        seconds--;
+                    }
+                    updateDisplay();
+                }, 1000);
+            }
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            isWorkInterval = true;
+            currentMinutes = workMinutes;
+            seconds = 0;
+            updateDisplay();
+            startResetButton.textContent = "Comenzar";
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+            isRunning = false;
+            startResetButton.textContent = "Comenzar";
+        }
+
+        startResetButton.addEventListener('click', () => {
+            if (isRunning) {
+                resetTimer();
+            } else {
+                startTimer();
+            }
+        });
+
+        stopButton.addEventListener('click', stopTimer);
+
+        updateDisplay();
+    </script>
+</body>
+</html>
