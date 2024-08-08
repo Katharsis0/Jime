@@ -1,0 +1,132 @@
+﻿@model IEnumerable<Classmate.Models.Tarea>
+@{
+    ViewData["Title"] = "Tareas Pendientes";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .navigation {
+            margin-bottom: 20px;
+        }
+
+            .navigation a {
+                text-decoration: none;
+                color: #007bff;
+                font-weight: bold;
+            }
+
+                .navigation a:hover {
+                    text-decoration: underline;
+                }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .actions a {
+            text-decoration: none;
+            color: #007bff;
+            margin-right: 10px;
+        }
+
+            .actions a:hover {
+                text-decoration: underline;
+            }
+
+        .checkbox-container {
+            text-align: center;
+        }
+
+            .checkbox-container input {
+                cursor: not-allowed; 
+            }
+    </style>
+</head>
+<body>
+    <h1>@ViewData["Title"]</h1>
+
+    <div class="navigation">
+        <a asp-action="Index">Volver a la lista completa</a>
+    </div>
+
+    <form method="get" asp-action="PendientesFiltrados" class="filter-form">
+        <label for="filter">Filtrar por:</label>
+        <select id="filter" name="filter">
+            <option value="day">Día</option>
+            <option value="week">Semana</option>
+            <option value="biweek">Quincena</option>
+            <option value="month">Mes</option>
+            <option value="nextMonth">Próximo Mes</option>
+        </select>
+        <button type="submit">Filtrar</button>
+    </form>
+
+    <div class="table-container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                    <th>@Html.DisplayNameFor(model => model.Contenido)</th>
+                    <th>@Html.DisplayNameFor(model => model.Tema)</th>
+                    <th>@Html.DisplayNameFor(model => model.Fecha)</th>
+                    <th>Pendiente</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Contenido)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Tema)</td>
+                        <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+                        <td class="checkbox-container">
+                            <input type="checkbox" @(item.Pendiente ? "checked" : "") disabled />
+                        </td>
+                        <td class="actions">
+                            @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
